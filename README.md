@@ -22,7 +22,7 @@ SindhiNet addresses this problem by applying a deep CNN to classify handwritten 
 ---
 ## Application Preview
 
-![SindhiNet Application](assets/sindhinet-home.png)
+![SindhiNet Application](https://github.com/KatparSarfraz1214/SindhiNet_a_deep_ConvNet_for_sindhi_alphabet/blob/96af73ceb1e6da406d3eab4fee43c651b84c78c0/19.10.2026_00.25.38_REC.png))
 ## Features
 
 | Feature | Description |
