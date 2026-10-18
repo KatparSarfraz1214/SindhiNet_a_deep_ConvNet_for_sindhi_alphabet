@@ -20,7 +20,9 @@ SindhiNet addresses this problem by applying a deep CNN to classify handwritten 
 - **End-to-End Workflow:** Connects a trained deep learning model to a usable application.
 
 ---
+## Application Preview
 
+![SindhiNet Application](assets/sindhinet-home.png)
 ## Features
 
 | Feature | Description |
