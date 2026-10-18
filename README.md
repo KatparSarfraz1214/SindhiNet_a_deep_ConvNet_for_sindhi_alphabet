@@ -123,6 +123,9 @@ The `class_names.json` file maps the model's output indices to the corresponding
 
 ---
 
+## Model Predictions
+![pred](https://github.com/KatparSarfraz1214/SindhiNet_a_deep_ConvNet_for_sindhi_alphabet/blob/b742e74f2a4f1ee41602c9d573950744599f3f39/download.png)
+
 ## Technology Stack
 
 | Technology | Purpose |
