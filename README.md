@@ -44,42 +44,28 @@ SindhiNet addresses this problem by applying a deep CNN to classify handwritten 
 The application follows a straightforward inference pipeline:
 
 
+
+## System Architecture
+
+The following diagram illustrates the end-to-end workflow of SindhiNet,
+from image upload and preprocessing to CNN inference and prediction
+visualization.
+
+```mermaid
 flowchart TD
-    A["User"] --> B["Streamlit Web Interface"]
-    B --> C["Upload Handwritten Sindhi Character"]
-    
-    C --> D["Image Preprocessing"]
-    D --> D1["EXIF Orientation Correction"]
-    D1 --> D2["Convert to Grayscale"]
-    D2 --> D3["Resize to 64 × 64"]
-    D3 --> D4["Normalize Pixels: 0–1"]
-    
-    D4 --> E["Preprocessed Image Tensor<br/>1 × 64 × 64 × 1"]
-    
-    F[("Trained CNN Model<br/>best_sindhi_ocr_model.keras")] --> G["Deep CNN Inference"]
-    E --> G
-    
-    G --> H["Softmax Output Scores<br/>52 Classes"]
-    H --> I["Class Label Mapping<br/>class_names.json"]
-    I --> J["Predicted Sindhi Character"]
-    
-    H --> K["Top-5 Predictions<br/>Confidence Scores"]
-    
-    J --> L["Streamlit Results Dashboard"]
-    K --> L
-    
-    L --> M["Prediction Display<br/>Character + Confidence"]
-    L --> N["Alternative Classes<br/>Score Visualization"]
-    
-    classDef input fill:#e8f3ff,stroke:#3478bd,color:#153c64
-    classDef process fill:#e8f7ed,stroke:#26945b,color:#154b2c
-    classDef model fill:#f0e9ff,stroke:#7952b3,color:#43266b
-    classDef output fill:#fff2d8,stroke:#d99a24,color:#68480b
-    
-    class A,B,C input
-    class D,D1,D2,D3,D4,E process
-    class F,G,H,I model
-    class J,K,L,M,N output
+    A["Handwritten Sindhi Character"] --> B["Streamlit Interface"]
+    B --> C["Image Preprocessing"]
+    C --> D["64 × 64 Grayscale Image"]
+    D --> E["Pixel Normalization: 0–1"]
+    E --> F["Trained CNN Model"]
+    F --> G["52-Class Output Scores"]
+    G --> H["Class Label Mapping"]
+    H --> I["Predicted Character"]
+    G --> J["Top-5 Predictions"]
+    I --> K["Results Dashboard"]
+    J --> K
+```
+
 
 
 ### Technical Workflow
